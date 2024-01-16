@@ -22,6 +22,9 @@ document.getElementById('tripol').addEventListener('click' , function(){
     const inputFeildValueString = inputFeild.value ;
     const inputFeildValue = parseFloat(inputFeildValueString);
     inputFeild.value = '' ;
+    if(isNaN(inputFeildValue)){
+        alert ('please provide a number')
+    }
     const tripol = Math.pow(inputFeildValue , 3)
     textElement.innerText = tripol ;
     return inputFeild ;
